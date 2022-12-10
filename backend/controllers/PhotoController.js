@@ -177,7 +177,7 @@ const commentPhoto = async (req, res) => {
 
     const reqUser = req.user;
 
-    const user = await User.findById(id);
+    const user = await User.findById(reqUser._id);
 
     const photo = await Photo.findById(id);
 
